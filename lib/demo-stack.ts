@@ -7,7 +7,7 @@ export class DemoStack extends cdk.Stack {
     super(scope, id, props);
 
     const greetingsLambda = new lambda.Function(this, "greetings-lambda",{
-      code: lambda.Code.fromAsset('../lambda'),
+      code: lambda.Code.fromAsset('lambda'),
       runtime: lambda.Runtime.NODEJS_14_X,
       handler: "greetings.handler"
     });
